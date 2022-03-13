@@ -8,8 +8,8 @@ The CenterNet makes the detection model more simple to train and prepare data.
 ***This now still support for single object only**
 
 <div align="center">
-    <img src="images/test-1.gif" width="416">
-    <img src="images/test-2.gif" width="416">
+    <img src="images/test-1.gif" width="256">
+    <img src="images/test-2.gif" width="256">
 </div>
 
 ## Prerequisites
