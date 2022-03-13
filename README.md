@@ -9,7 +9,9 @@ The CenterNet makes the detection model more simple to train and prepare data.
 
 <div align="center">
     <img src="images/test-1.gif" width="256">
-    <img src="images/test-2.gif" width="256">
+    <img src="images/test-2.gif" width="256"><br>
+    <img src="images/test-3.gif" width="256">
+    <img src="images/test-4.gif" width="256">
 </div>
 
 ## Prerequisites
