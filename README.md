@@ -14,6 +14,7 @@ The CenterNet makes the detection model more simple to train and prepare data.
     <img src="images/test-4.gif" width="256">
 </div>
 
-## Prerequisites
-- imgaug
-- pytorch
+## Data
+
+ImageNet: [ILSVRC](https://image-net.org/challenges/LSVRC/)
+
