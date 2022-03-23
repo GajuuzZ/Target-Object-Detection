@@ -14,14 +14,6 @@ The CenterNet makes the detection model more simple to train and prepare data.
     <img src="images/test-4.gif" width="256">
 </div>
 
-## Data
-
-ImageNet: [ILSVRC](https://image-net.org/challenges/LSVRC/)
-
-To use my ILSVRC loader the data folder format must be.
-
-./dataset/ILSVRC/Data/VID/{train, val}
-
 ## Demo
 
 To use very large datasets to hopefully cover as many objects as possible. 
@@ -40,6 +32,14 @@ are trained only for one epoch, Therefor it may still have low accuracy.
 Draw a bounding box on an object to be a target. If no --image args program 
 will let you draw on video press 'c' to pass a frame, press 'space bar' to finish
 (you may have to press two time)
+
+## Data
+
+ImageNet: [ILSVRC](https://image-net.org/challenges/LSVRC/)
+
+To use my ILSVRC loader the data folder format must be.
+
+./dataset/ILSVRC/Data/VID/{train, val}
 
 ## Training
 
