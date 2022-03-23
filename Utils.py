@@ -1,10 +1,11 @@
+import os
 import cv2
 import random
 import numpy as np
 import torch
 from collections import namedtuple
 
-from prepro_siamese import crop_and_pad, get_context_size
+from Data.prepro_siamese import crop_and_pad, get_context_size
 
 
 ### To reproduce the random data batch order and resuming.
@@ -99,4 +100,41 @@ def get_template_image(image, bb, size, context_amount=0.5):
     t_sz = get_context_size(cbb, context_amount)
     image, _ = crop_and_pad(image, cbb[0], cbb[1], size, (t_sz, t_sz))
     return image
+
+
+def select_target(fil):
+    print('Controls: use `space` or `enter` to finish selection, use key `c` to cancel selection')
+    print('Or If video use `c` to go next frame, use `ESC` to cancel')
+    ext = os.path.splitext(fil)[-1]
+    if ext in ['.jpg', '.JPEG', '.png']:
+        image = cv2.imread(fil)
+        bb = cv2.selectROI('Select target object', image)
+        cv2.destroyAllWindows()
+        if all(bb) == 0:
+            return None, None
+        bb = [bb[0], bb[1], bb[0] + bb[2], bb[1] + bb[3]]
+        return image, bb
+    elif ext in ['.mp4', '.avi']:
+        cap = cv2.VideoCapture(fil)
+        res = None, None
+        while cap.isOpened():
+            ret, frame = cap.read()
+            if ret:
+                bb = cv2.selectROI('Select target object', frame)
+                k = cv2.waitKey(0)
+                if k == 27:  # ESC
+                    break
+                if all(bb) == 0:
+                    continue
+                else:
+                    bb = [bb[0], bb[1], bb[0] + bb[2], bb[1] + bb[3]]
+                    res = frame, bb
+                    break
+
+        cap.release()
+        cv2.destroyAllWindows()
+        return res
+    else:
+        print('Can not read file!')
+        return None, None
 

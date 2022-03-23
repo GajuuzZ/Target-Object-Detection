@@ -30,8 +30,8 @@ BEST_FILE = os.path.join(SAVE_FOLDER, 'best-model.pth')
 SAVE_INTERVAL = 200
 SAMPLE_INTERVAL = 2000
 
-TRAIN_PAIRS = 'DATASet/train_pairs_withneg_e{}.npy'
-VALID_PAIRS = 'DATASet/valid_pairs_withneg_e{}.npy'
+TRAIN_PAIRS = 'dataset/train_pairs_withneg_e{}.npy'
+VALID_PAIRS = 'dataset/valid_pairs_withneg_e{}.npy'
 
 RESNET_SLUG = 'r18'
 SEARCH_SIZE = (255, 255)

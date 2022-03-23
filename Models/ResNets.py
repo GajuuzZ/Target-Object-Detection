@@ -117,8 +117,8 @@ class Bottleneck(nn.Module):
 class ResNet(nn.Module):
     def __init__(self, slug='r50', pretrained=False, modifies_layer=False):
         super().__init__()
-        if not pretrained:
-            print("Caution, not loading pretrained weights.")
+        # if not pretrained:
+        #     print("Caution, not loading pretrained weights.")
 
         num_bottleneck_filters = 0
         if slug == 'r18':

@@ -1,8 +1,8 @@
 import torch
 import torch.nn as nn
 
-from ResNets import ResNet
-from RPN import F, DepthwiseXCorr, AdjustAllLayer
+from Models.ResNets import ResNet
+from Models.RPN import F, DepthwiseXCorr, AdjustAllLayer
 
 
 class DepthwiseRPN_Center(nn.Module):

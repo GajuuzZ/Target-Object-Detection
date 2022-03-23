@@ -4,7 +4,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from XCorr import xcorr_depthwise, xcorr_fast
+from Models.XCorr import xcorr_depthwise, xcorr_fast
 
 
 class UPChannelRPN(nn.Module):

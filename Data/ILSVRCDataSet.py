@@ -58,7 +58,7 @@ def to_bboxarray(str_list):
 
 class ILSVRCDataSet(object):
     """Data set loader for ImageNet Large Scale Visual Recognition Challenge (ILSVRC)"""
-    def __init__(self, mode='train', path_to_dataset='./dataset/ILSVRC', list_file='./Data/ilsvrc_list.csv'):
+    def __init__(self, mode='train', path_to_dataset='./dataset/ILSVRC', list_file='./dataset/ilsvrc_list.csv'):
         self.mode = mode
         self.path_to_dataset = path_to_dataset
         self.list_file = list_file

@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 
 class SearchTemplateDataset(Dataset):
     def __init__(self, sub_dataset, search_size, template_size, hm_size, context_amount,
-                 max_frame_range=100, norm_wh=True, augment_fn=None, pairs_idx_file='./Data/idx_pairs.npy'):
+                 max_frame_range=100, norm_wh=True, augment_fn=None, pairs_idx_file='./dataset/idx_pairs.npy'):
         self.data = sub_dataset.data
 
         self.search_size = search_size if isinstance(search_size, (tuple, list)) else (search_size, search_size)
@@ -172,7 +172,7 @@ if __name__ == '__main__':
 
     dataset = SearchTemplateDataset(ILSVRCDataSet('train'), 255, 127, 26, 0.5, max_frame_range=1000,
                                     augment_fn=siamcenter_search_augpipe(),
-                                    pairs_idx_file=os.path.join('DATASet', 'train_pairs_e0.npy'))
+                                    pairs_idx_file=os.path.join('dataset', 'train_pairs_e0.npy'))
     #dataset.show_sample(0)
 
     #dataset = Test(1000)
