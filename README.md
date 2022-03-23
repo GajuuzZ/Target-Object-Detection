@@ -41,6 +41,10 @@ Draw a bounding box on an object to be a target. If no --image args program
 will let you draw on video press 'c' to pass a frame, press 'space bar' to finish
 (you may have to press two time)
 
+## Training
+
+later.
+
 ## Reference
 
 - SiamRPN : https://github.com/HonglinChu/SiamTrackers
