@@ -20,8 +20,8 @@ To use very large datasets to hopefully cover as many objects as possible.
 Surely it will use too much time to train too. So these demo models I provide 
 are trained only for one epoch, Therefor it may still have low accuracy. 
 
-- [r18_demo.pth]([https://drive.google.com/file/d/12UiEF5qIfhXZmroWAMGZxV9A-phHZvwz/view?usp=sharing](https://drive.google.com/file/d/1gG-z3llwKW2ct0am4Lwrs7NknTXh2EfN/view?usp=sharing))
-- [r50_demo.pth]([https://drive.google.com/file/d/1jvwhFtbnrOaqFAbK4A_DysFfVgy6mHIr/view?usp=sharing](https://drive.google.com/file/d/19-c80eSJa_1MW5QpW5FicAKFA1KEPhzF/view?usp=sharing))
+- [r18_demo.pth](https://drive.google.com/file/d/1gG-z3llwKW2ct0am4Lwrs7NknTXh2EfN/view?usp=sharing)
+- [r50_demo.pth](https://drive.google.com/file/d/19-c80eSJa_1MW5QpW5FicAKFA1KEPhzF/view?usp=sharing)
 
 ### run main.py
 
